@@ -7,6 +7,7 @@ import { Artists } from "./pages/artists"
 import { PageNotFound } from "./pages/notFound"
 import { Favorites } from "./pages/favorites"
 import { Albums } from "./pages/albums"
+import { Tracks } from "./pages/tracks"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/artists" element={<Artists />} />
         <Route path="/albums" element={<Albums />} />
+        <Route path="/tracks" element={<Tracks />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>

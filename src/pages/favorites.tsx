@@ -38,6 +38,32 @@ export const Favorites = () =>{
                         />
                     )
                 })}
+                {stored.albums.map((album: any) =>{
+                    const linkString = `/albums?search=${album.id}`
+                    return (
+                        <DisplayItem
+                        key={album.id}
+                        link={linkString} 
+                        imgUrl={album.imgUrl} 
+                        text={album.name} 
+                        itemClass="albumItem"
+                        shouldDisply={true}
+                        />
+                    )
+                })}
+                {stored.tracks.map((track: any) =>{
+                    const linkString = `/tracks?search=${track.id}`
+                    return (
+                        <DisplayItem
+                        key={track.id}
+                        link={linkString} 
+                        imgUrl={track.imgUrl} 
+                        text={track.name} 
+                        itemClass="trackItem"
+                        shouldDisply={true}
+                        />
+                    )
+                })}
             </ul>
             </>
             : <>

@@ -1,6 +1,5 @@
 //w wersji publicznej ta funkcja powinna być wykonywana przez serwer (back-end) z powodu wrażliwych danych używanych do pobrania tokenu
 //CLIENT_SECRET nie może być okazywany innym, nie może być publiczny
-//nie mam dostępu do serwera lol
 interface Token{
     access: string;
     expires: number;

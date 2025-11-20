@@ -48,9 +48,11 @@ export const Tracks = () => {
         console.log("details")
         console.log(detailsJson)
 
-        const featuresRes = await fetch(
-  `https://api.spotify.com/v1/audio-features/${trackId}`,
-  { headers: { Authorization: `Bearer ${token}` } }
+        const featuresRes = await fetch( `https://corsproxy.io/?${encodeURIComponent(`https://theaudiodb.com/api/v1/json/2/searchtrack.php?s=${detailsJson.artists[0].name}&t=${detailsJson.name} `)} `) 
+        const featuresJson = await featuresRes.json() 
+        setAudioFeatures(featuresJson) 
+        console.log("features") 
+        console.log(featuresJson)
 )
         const featuresJson = await featuresRes.json()
         setAudioFeatures(featuresJson)
